@@ -5,57 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Super Square</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 2em 1em;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #f0f0f0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #111;
-      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .container {
+      width: 100%;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
 
-    h1 {
-      font-size: 2.8em;
+    .hero {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
       color: #00e0ff;
-      margin-bottom: 0.2em;
-      text-align: center;
+      margin-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 1.15em;
-      line-height: 1.6;
-      margin: 0.5em 0;
-      text-align: center;
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .play-button {
+      margin: 2rem auto 0;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+      background-color: #00e0ff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .play-button:hover {
+      background-color: #00b8d4;
     }
 
     .section {
-      margin-top: 2.5em;
+      background-color: #1a1a1a;
+      border-left: 4px solid #00e0ff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
     }
 
-    .instructions, .milestones, .credits {
-      background: #1c1c1c;
-      border: 2px solid #333;
-      padding: 1.2em;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 224, 255, 0.1);
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #00e0ff;
     }
 
     .instructions ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .instructions li {
-      padding: 0.4em 0;
-      font-size: 1.05em;
+      padding-left: 0;
     }
 
     .instructions li::before {
-      content: "➤ ";
+      content: "▶ ";
       color: #00e0ff;
+    }
+
+    .instructions li {
+      margin: 0.4rem 0;
     }
 
     a {
@@ -63,88 +94,58 @@
       text-decoration: none;
     }
 
-    .milestones p, .credits p {
-      margin: 0.4em 0;
-      font-size: 1em;
-    }
-
-    .highlight {
-      color: #ffcc00;
-    }
-
-    #playButton {
-      display: block;
-      background-color: #00e0ff;
-      color: #000;
-      font-weight: bold;
-      padding: 1em 2em;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.3em;
-      cursor: pointer;
-      margin: 2em auto;
-      transition: background-color 0.2s ease;
-    }
-
-    #playButton:hover {
-      background-color: #00b8d9;
-    }
-
     .footer {
-      margin-top: 3em;
+      margin-top: 3rem;
       text-align: center;
-      font-size: 0.9em;
-      color: #888;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <h1>Super Square</h1>
-  <p><strong>Evade enemies and collect coins in this strategic grid-based game!</strong></p>
-  <p>FOLLOW <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a> if you enjoyed this!</p>
+    <div class="hero">
+      <h1>Super Square</h1>
+      <p>Evade enemies and collect coins in this strategic grid-based game!</p>
+      <p>Follow <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a> if you enjoyed this!</p>
+      <button class="play-button" onclick="window.location.href='game.html'">▶ Play!</button>
+    </div>
 
-  <button id="playButton">▶ Play!</button>
+    <div class="section instructions">
+      <h2>[Instructions]</h2>
+      <ul>
+        <li>Click on the arrow buttons to move.</li>
+        <li>Avoid enemies and going off the grid.</li>
+        <li>You get a point for every move you make.</li>
+        <li>Collect coins to earn 3 points.</li>
+        <li>Red enemies move in a straight line.</li>
+        <li>Orange enemies move randomly.</li>
+      </ul>
+    </div>
 
-  <div class="section instructions">
-    <h2>[Instructions]</h2>
-    <ul>
-      <li>Click on the arrow buttons to move.</li>
-      <li>Avoid enemies and going off the grid.</li>
-      <li>You get a point for every move you make.</li>
-      <li>Collect coins to earn 3 points.</li>
-      <li>Red enemies move in a straight line.</li>
-      <li>Orange enemies move randomly.</li>
-    </ul>
+    <div class="section milestones">
+      <h2>[Milestones]</h2>
+      <p>(10/23/2022) @codeGio, @JackPigPro and @prodforer liked!</p>
+      <p>(10/26/2022) Updated to make the game harder.</p>
+      <p>(11/24/2022) Curated by @-SimplyWatermelon-! :D</p>
+      <p>(11/25/2022) 10k views, @Za-Chary and @papipupepappa</p>
+      <p>(11/25/2022) Added world record and fixed bugs.</p>
+      <p>(11/26/2022) Reached 100 followers and on the top remixed section! Thanks everyone!</p>
+    </div>
+
+    <div class="section credits">
+      <h2>[Credits]</h2>
+      <p>Thanks to @Skyset for the project "Turn v2", which inspired this game.</p>
+      <p>Thanks to BSlick for the song "Curiosity".</p>
+      <p>Thanks to @-SimplyWatermelon- for curating this!</p>
+      <p>Code and art by <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a>.</p>
+    </div>
+
+    <div class="footer">
+      #games #grid #strategy
+    </div>
+
   </div>
-
-  <div class="section milestones">
-    <h2>[Milestones]</h2>
-    <p>(10/23/2022) @codeGio, @JackPigPro and @prodforer liked!</p>
-    <p>(10/26/2022) Updated to make the game harder.</p>
-    <p>(11/24/2022) Curated by @-SimplyWatermelon-! :D</p>
-    <p>(11/25/2022) 10k views, @Za-Chary and @papipupepappa</p>
-    <p>(11/25/2022) Added world record and fixed bugs.</p>
-    <p>(11/26/2022) Reached 100 followers and on the top remixed section! Thanks everyone!</p>
-  </div>
-
-  <div class="section credits">
-    <h2>[Credits]</h2>
-    <p>Thanks to @Skyset for the project "Turn v2", which inspired this game.</p>
-    <p>Thanks to BSlick for the song "Curiosity".</p>
-    <p>Thanks to @-SimplyWatermelon- for curating this!</p>
-    <p>Code and art by <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a>.</p>
-  </div>
-
-  <div class="footer">
-    #games #grid #strategy
-  </div>
-
-  <script>
-    document.getElementById("playButton").addEventListener("click", () => {
-      window.location.href = "game.html";
-    });
-  </script>
-
 </body>
 </html>
