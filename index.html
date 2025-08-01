@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      padding: 2em;
+      padding: 2em 1em;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #111;
       color: #eee;
@@ -17,29 +17,40 @@
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       color: #00e0ff;
+      margin-bottom: 0.2em;
+      text-align: center;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.15em;
       line-height: 1.6;
+      margin: 0.5em 0;
+      text-align: center;
     }
 
     .section {
-      margin-top: 2em;
+      margin-top: 2.5em;
     }
 
     .instructions, .milestones, .credits {
-      background: #1a1a1a;
-      border: 2px solid #444;
-      padding: 1em;
-      border-radius: 10px;
+      background: #1c1c1c;
+      border: 2px solid #333;
+      padding: 1.2em;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 224, 255, 0.1);
     }
 
     .instructions ul {
       list-style: none;
       padding: 0;
+      margin: 0;
+    }
+
+    .instructions li {
+      padding: 0.4em 0;
+      font-size: 1.05em;
     }
 
     .instructions li::before {
@@ -53,13 +64,8 @@
     }
 
     .milestones p, .credits p {
-      margin: 0.5em 0;
-    }
-
-    .footer {
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #999;
+      margin: 0.4em 0;
+      font-size: 1em;
     }
 
     .highlight {
@@ -67,26 +73,38 @@
     }
 
     #playButton {
-      display: inline-block;
+      display: block;
       background-color: #00e0ff;
       color: #000;
       font-weight: bold;
-      padding: 0.7em 1.5em;
+      padding: 1em 2em;
       border: none;
-      border-radius: 8px;
-      font-size: 1.1em;
+      border-radius: 12px;
+      font-size: 1.3em;
       cursor: pointer;
-      margin-bottom: 1.5em;
+      margin: 2em auto;
+      transition: background-color 0.2s ease;
+    }
+
+    #playButton:hover {
+      background-color: #00b8d9;
+    }
+
+    .footer {
+      margin-top: 3em;
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <button id="playButton">▶ Play!</button>
-
   <h1>Super Square</h1>
   <p><strong>Evade enemies and collect coins in this strategic grid-based game!</strong></p>
   <p>FOLLOW <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a> if you enjoyed this!</p>
+
+  <button id="playButton">▶ Play!</button>
 
   <div class="section instructions">
     <h2>[Instructions]</h2>
@@ -116,6 +134,10 @@
     <p>Thanks to BSlick for the song "Curiosity".</p>
     <p>Thanks to @-SimplyWatermelon- for curating this!</p>
     <p>Code and art by <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a>.</p>
+  </div>
+
+  <div class="footer">
+    #games #grid #strategy
   </div>
 
   <script>
