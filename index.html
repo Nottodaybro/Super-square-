@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Super Square</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2em;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #eee;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #00e0ff;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 2em;
+    }
+
+    .instructions, .milestones, .credits {
+      background: #1a1a1a;
+      border: 2px solid #444;
+      padding: 1em;
+      border-radius: 10px;
+    }
+
+    .instructions ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .instructions li::before {
+      content: "➤ ";
+      color: #00e0ff;
+    }
+
+    a {
+      color: #00e0ff;
+      text-decoration: none;
+    }
+
+    .milestones p, .credits p {
+      margin: 0.5em 0;
+    }
+
+    .footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    .highlight {
+      color: #ffcc00;
+    }
+
+    #playButton {
+      display: inline-block;
+      background-color: #00e0ff;
+      color: #000;
+      font-weight: bold;
+      padding: 0.7em 1.5em;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-bottom: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="playButton">▶ Play!</button>
+
+  <h1>Super Square</h1>
+  <p><strong>Evade enemies and collect coins in this strategic grid-based game!</strong></p>
+  <p>FOLLOW <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a> if you enjoyed this!</p>
+
+  <div class="section instructions">
+    <h2>[Instructions]</h2>
+    <ul>
+      <li>Click on the arrow buttons to move.</li>
+      <li>Avoid enemies and going off the grid.</li>
+      <li>You get a point for every move you make.</li>
+      <li>Collect coins to earn 3 points.</li>
+      <li>Red enemies move in a straight line.</li>
+      <li>Orange enemies move randomly.</li>
+    </ul>
+  </div>
+
+  <div class="section milestones">
+    <h2>[Milestones]</h2>
+    <p>(10/23/2022) @codeGio, @JackPigPro and @prodforer liked!</p>
+    <p>(10/26/2022) Updated to make the game harder.</p>
+    <p>(11/24/2022) Curated by @-SimplyWatermelon-! :D</p>
+    <p>(11/25/2022) 10k views, @Za-Chary and @papipupepappa</p>
+    <p>(11/25/2022) Added world record and fixed bugs.</p>
+    <p>(11/26/2022) Reached 100 followers and on the top remixed section! Thanks everyone!</p>
+  </div>
+
+  <div class="section credits">
+    <h2>[Credits]</h2>
+    <p>Thanks to @Skyset for the project "Turn v2", which inspired this game.</p>
+    <p>Thanks to BSlick for the song "Curiosity".</p>
+    <p>Thanks to @-SimplyWatermelon- for curating this!</p>
+    <p>Code and art by <a href="https://scratch.mit.edu/users/KEVEK/" target="_blank">@KEVEK</a>.</p>
+  </div>
+
+  <script>
+    document.getElementById("playButton").addEventListener("click", () => {
+      window.location.href = "game.html";
+    });
+  </script>
+
+</body>
+</html>
